@@ -1,0 +1,30 @@
+---
+abstract: "Access to Graphite's raw data"
+author:
+  - 'Ryan Olson <ryano@gimpysoft.com>'
+build_requires:
+  Test::MockObject::Extends: 0
+  Test::Most: 0
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120921'
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Net-Graphite-Reader
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Furl: 1
+  JSON: 2.5
+  MIME::Base64: 3
+  Moose: 1
+  MooseX::Types::Moose: 0.01
+  MooseX::Types::URI: 0.03
+  Try::Tiny: 0
+  perl: 5.006
+version: 0.01

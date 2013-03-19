@@ -1,0 +1,18 @@
+Changes
+lib/Net/Graphite/Reader.pm
+lib/Net/Graphite/Reader/Response.pm
+lib/Net/Graphite/Reader/Response/Metric.pm
+Makefile.PL
+MANIFEST			This list of files
+README
+t/00-load.t
+t/01-generate-url.t
+t/02-metric.t
+t/03-response.t
+t/04-query.t
+t/manifest.t
+t/boilerplate.t
+t/pod-coverage.t
+t/pod.t
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
