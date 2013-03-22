@@ -8,9 +8,17 @@ use List::Util;
 
 Net::Graphite::Reader::Response::Metric - The data for a single metric
 
+=head1 SYNOPSIS
+
+  my($metric) = $repsonse->all_metrics;
+
+  print 'Average is ' . $metric->average . "\n";
+  print 'Sum is ' . $metric->sum . "\n";
+  print 'Everything is " . Dumper($metric->datapoints) . "\n";
+
 =head1 ATTRIBUTES
 
-=head2 target 
+=head2 target
 
 The target of the metric
 
@@ -24,7 +32,9 @@ has 'target' => (
 
 =head2 datapoints
 
-The raw data for this metric returned from Graphite.
+The raw data for this metric returned from Graphite. Returns an array
+ref of [value, timestamp] data points where timestamp is an integer in
+epoch time.
 
 =cut
 

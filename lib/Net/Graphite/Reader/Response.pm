@@ -16,6 +16,7 @@ Net::Graphite::Reader::Response - The results of a query
 =head2 metrics
 
 A list of metrics that were returned.
+(Net::Graphite::Reader::Response::Metric objects)
 
 =cut
 

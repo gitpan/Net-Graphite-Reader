@@ -1,7 +1,7 @@
 package Net::Graphite::Reader;
 use Moose;
 use namespace::autoclean;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use MooseX::Types::Moose qw(:all);
 use MooseX::Types::URI qw(Uri);
@@ -15,6 +15,24 @@ use Net::Graphite::Reader::Response;
 =head1 NAME
 
 Net::Graphite::Reader - Access to Graphite's raw data
+
+=head1 SYNOPSIS
+
+  use Net::Graphite::Reader;
+
+  my $gr = Net::Graphite::Reader->new(
+             url => 'http://my.graphite.server',
+           );
+
+  my $response = $gr->query(
+    target => 'some.cool.statistic',
+    from   => '-24hours',
+    to     => 'now',
+  );
+
+  my @metrics = $response->all_metrics;
+
+  print "Average is " . $metrics[0]->average .  "\n";
 
 =head1 ATTRIBUTES
 
@@ -89,6 +107,22 @@ sub _build_furl {
 =head1 METHODS
 
 =head2 query
+
+=over 4
+
+=item B<Arguments>
+
+=item target: The statistic or formula to retrieve, or an arrayref of such.
+
+=item from: Begin date for stat retrieval
+
+=item to: End date for stat retrieval
+
+=item B<Returns>
+
+=item Net::Graphite::Reader::Response
+
+=back
 
 =cut
 

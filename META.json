@@ -40,10 +40,11 @@
             "MooseX::Types::Moose" : "0.01",
             "MooseX::Types::URI" : "0.03",
             "Try::Tiny" : "0",
+            "namespace::autoclean" : "0",
             "perl" : "5.006"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }
